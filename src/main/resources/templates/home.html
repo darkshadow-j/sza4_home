@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form th:action="@{/encode}" th:object="${formEncoder}" method="post">
+    <label for="raw">Enter raw Text</label>
+    <input type="text" id="raw" name="rawPassword"/> <p th:text="*{encodedPassword}"></p><br>
+    <input type="submit" value="encode">
+</form>
+
+</body>
+</html>
